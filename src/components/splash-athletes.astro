@@ -8,16 +8,16 @@ import {Image} from "astro:assets";
 import ContentSwiper from "./react/ContentSwiper";
 ---
 
-<section class="relative z-50 bg-white">
+<section class="relative z-[100] bg-white">
     <div class="relative">
         <!--For mobile heading section-->
-        <div class="sm:block md:hidden">
+        <div class="relative z-[100] sm:block md:hidden">
             <ContentHeading heading="ATHLETES"/>
         </div>
         <!---->
         <div class="sm:relative md:absolute md:left-0 md:top-[70px] lg:left-[175px] lg:top-[50px] mx-auto z-20">
             <Image
-                    class="hidden h-auto w-full object-cover lg:block"
+                    class="hidden h-auto w-1/2 object-cover lg:block"
                     src={rugbyMan}
                     width="678"
                     height="950"
@@ -25,7 +25,7 @@ import ContentSwiper from "./react/ContentSwiper";
                     alt="rugby man"
             />
             <Image
-                    class="h-auto w-full object-cover sm:hidden md:block md:w-[67%] lg:hidden"
+                    class="h-auto w-full object-cover sm:hidden md:block md:w-1/2 lg:hidden"
                     src={rugbyManTablet}
                     width="518"
                     height="719"

@@ -3,16 +3,16 @@ import ContentSection from "./react/ContentSection";
 import basketballMan from "~/assets/basketball-man.png";
 import basketballManTablet from "~/assets/basketball-man--tablet.png";
 import basketballManMobile from "~/assets/basketball-man--mobile.png";
-import {Image} from "astro:assets";
+import { Image } from "astro:assets";
 import ContentSwiper from "./react/ContentSwiper";
 import ContentHeading from "./content-heading.astro";
 ---
 
-<section class="relative z-50 bg-white">
+<section class="relative bg-white sm:z-[100] md:z-50">
   <div class="relative">
     <!--For mobile heading section-->
-    <div class="sm:block md:hidden">
-      <ContentHeading heading="PLAYERS"/>
+    <div class="relative z-[100] sm:block md:hidden">
+      <ContentHeading heading="PLAYERS" />
     </div>
     <div class="sm:hidden md:block">
       <ContentSection
@@ -45,10 +45,10 @@ import ContentHeading from "./content-heading.astro";
       </ContentSection>
     </div>
     <div
-      class="sm:relative md:absolute md:right-0 md:top-[31px] lg:right-[125px] lg:top-[10px] z-20"
+      class="z-20 sm:relative md:absolute md:right-0 md:top-[31px] lg:right-[125px] lg:top-[10px]"
     >
       <Image
-        class="hidden h-full w-full object-cover lg:block"
+        class="hidden h-full w-[991px] object-cover lg:block"
         src={basketballMan}
         width="991"
         height="815"
@@ -64,15 +64,15 @@ import ContentHeading from "./content-heading.astro";
         alt="basketball man tablet"
       />
       <Image
-          class="h-auto w-100 object-cover sm:block md:hidden mx-auto"
-          src={basketballManMobile}
-          width="302"
-          height="250"
-          loading="lazy"
-          alt="basketball man mobile"
+        class="w-100 mx-auto h-auto object-cover sm:block md:hidden"
+        src={basketballManMobile}
+        width="302"
+        height="250"
+        loading="lazy"
+        alt="basketball man mobile"
       />
     </div>
-    <div class="sm:block md:hidden h-0">
+    <div class="h-0 sm:block md:hidden">
       <ContentSwiper type="PLAYERS" client:load />
     </div>
   </div>
