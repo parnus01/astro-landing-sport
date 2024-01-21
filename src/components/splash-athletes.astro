@@ -1,0 +1,80 @@
+---
+import ContentSection from "./react/ContentSection";
+import ContentHeading from "~/components/content-heading.astro";
+import rugbyMan from "~/assets/rugby-man.png";
+import rugbyManTablet from "~/assets/rugby-man--tablet.png";
+import rugbyManMobile from "~/assets/rugby-man--mobile.png";
+import {Image} from "astro:assets";
+import ContentSwiper from "./react/ContentSwiper";
+---
+
+<section class="relative z-50 bg-white">
+    <div class="relative">
+        <!--For mobile heading section-->
+        <div class="sm:block md:hidden">
+            <ContentHeading heading="ATHLETES"/>
+        </div>
+        <!---->
+        <div class="sm:relative md:absolute md:left-0 md:top-[70px] lg:left-[175px] lg:top-[50px] mx-auto z-20">
+            <Image
+                    class="hidden h-auto w-full object-cover lg:block"
+                    src={rugbyMan}
+                    width="678"
+                    height="950"
+                    loading="lazy"
+                    alt="rugby man"
+            />
+            <Image
+                    class="h-auto w-full object-cover sm:hidden md:block md:w-[67%] lg:hidden"
+                    src={rugbyManTablet}
+                    width="518"
+                    height="719"
+                    loading="lazy"
+                    alt="rugby man tablet"
+            />
+            <Image
+                    class="h-auto w-100 object-cover sm:block md:hidden mx-auto"
+                    src={rugbyManMobile}
+                    width="218"
+                    height="281"
+                    loading="lazy"
+                    alt="rugby man mobile"
+            />
+        </div>
+        <div class="sm:hidden lg:block md:block">
+            <ContentSection
+                    heading="ATHLETES"
+                    alignSide="right"
+                    order="01"
+                    title="CONNECTION"
+            >
+                Connect with coaches directly, you can ping coaches to view profile.
+            </ContentSection>
+            <ContentSection
+                    backgroundClass="bg-[#F5F4F9]"
+                    alignSide="right"
+                    order="02"
+                    title="COLLABORATION"
+            >
+                Work with other student athletes to increase visability. When you share
+                and like other players videos it will increase your visability as a
+                player. This is the team work aspect to Surface 1.
+            </ContentSection>
+            <ContentSection
+                    backgroundClass="bg-[#5E3DB3]"
+                    theme="lightPurple"
+                    alignSide="right"
+                    order="03"
+                    title="GROWTH"
+            >
+                <div class="text-white">
+                    Resources and tools for you to get better as a student Athelte. Access
+                    to training classes, tutor sessions, etc
+                </div>
+            </ContentSection>
+        </div>
+        <div class="sm:block md:hidden ">
+            <ContentSwiper type="ATHLETES" client:load/>
+        </div>
+    </div>
+</section>

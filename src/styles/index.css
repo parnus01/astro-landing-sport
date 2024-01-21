@@ -1,0 +1,9 @@
+@import '@fontsource/roboto';
+
+html {
+    overflow-x: hidden;
+}
+
+.swiper-pagination-bullet-active {
+    background-color: #5C3CAF !important;
+}
