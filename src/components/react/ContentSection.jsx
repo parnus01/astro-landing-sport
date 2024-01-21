@@ -51,7 +51,7 @@ const ContentSection = ({
               className={`h-[5px] w-[22px] border-2 border-solid ${themeConfig[theme].underlineColor} ${themeConfig[theme].underlineBg} rounded-lg`}
             />
           </div>
-          <div className="align-top leading-[42px] tracking-[1.5px] text-[#C2C2C2] sm:text-[28px] md:text-4xl md:leading-[42px]">
+          <div className="break-all align-top leading-[42px] tracking-[1.5px] text-[#C2C2C2] sm:text-[28px] md:text-4xl md:leading-[42px]">
             {title}
           </div>
         </div>
