@@ -4,6 +4,8 @@
     --swiper-pagination-bullet-width: 10px;
     --swiper-pagination-bullet-height: 10px;
     --swiper-theme-color: #5C3CAF;
+    --swiper-pagination-bullet-inactive-color: #D8D8D8;
+    --swiper-pagination-bullet-inactive-opacity: 1;
 }
 
 html {
