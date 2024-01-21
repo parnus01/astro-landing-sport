@@ -1,9 +1,12 @@
 @import '@fontsource/roboto';
 
+* {
+    --swiper-pagination-bullet-width: 10px;
+    --swiper-pagination-bullet-height: 10px;
+    --swiper-theme-color: #5C3CAF;
+}
+
 html {
     overflow-x: hidden;
 }
 
-.swiper-pagination-bullet-active {
-    background-color: #5C3CAF !important;
-}
